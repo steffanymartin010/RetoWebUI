@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #102552
+}
+
+.container-grid{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display:inline;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows:repeat(3, auto) 
+    grid-template-areas "container-text search menu"
+                        "search search search"
+                        "container-one  container container"  
+}
+
+.container-grid > div,
+.container-grid .header
+.container-grid .container-text,
+.container-grid .search,
+.container-grid .container-one, 
+.container-grid .container{
+    background-color: #102552;
+    grid-area: header;
+    font-family: 'Zen Loop', cursive;
+}
+
+.container-text{
+    background: rgb(8, 5, 38);
+    color: #fff;
+    display: flex;
+    width: 100%;
+}
+
+.menu{
+    width: 400px;
+    background: rgb(147, 3, 3);
+    display:flex;
+    list-style: none;
+    text-align:end;
+}
+
+.menu li{
+    margin: 10px;
+    padding: 30px;
+}
+
+li a{
+    color:#fff;
+}
+
+.container-grid .header{
+    background-color: #12203E;
+    display: flex;
+    padding: 40px;
+    color: #fff;
+    font-family: 'Zen Loop', cursive;
+    border: 1px solid #999;
+    box-shadow: 6
+    3px 3px 7px #999;
+}
+
+.container-grid #search[type=text]{
+    width: 300px;
+    border-radius: 30px;
+    cursor: pointer;
+    grid-area: search;
+}
+
+.container-grid .container-one{
+    font-family: 'Zen Maru Gothic', sans-serif;
+    background-color: #102552;
+    color: #fff;
+    min-height: 100px;
+    grid-area: container-one;
+}
+
+.container{
+    display: flex;
+    width: 65vw;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    justify-content: center;
+    grid-area: container;
+}
+
+.card-image{
+    width: 100%;
+    height: 100%;
+}
+
+.image-container{
+    width: 250px;
+    height: 250px;
+}
+
+.description-container{
+    display: flex;
+    align-items: center;
+    height: 130px;
+    width: 100px;
+    text-align: center;
+    font-family: 'Zen Loop', cursive;
+}
+
+.card-big-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+    border: 1px solid #999;
+    box-shadow: 6px 6px 8px #999;
+    background-color: #12203E;
+    color: #fff;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+@media all and (color-index) {
+    .container-grid{
+        grid-template-areas: "container-text container-text container-text container-text"
+                        "search search search search"
+                         "container-one container-one container-one container-one" 
+                         "container container container container"
+    }
+}
