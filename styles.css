@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: #102552
+}
+/*Contenedor principal*/
+.container-grid{
+    width: 100%;
+    height: 95vh;
+    /*max-width: 1000px;*/
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 50% 50%; /*columnas*/
+    grid-template-rows: 20% 10% 70%;/*filas*/
+}
+
+
+/*encabezado*/
+.header{
+    height: 200px;
+    background-color: #12203E;
+    grid-row: 1; /*fila 1*/
+    grid-column-start: 1; /*la columna 1*/
+    grid-column-end: 3; /*hasta la columna 2*/
+    display: flex;
+    padding: 50px;
+    color: #fff;
+    font-family: 'Zen Loop', cursive;
+    border: 1px solid #999;
+    box-shadow: 5px 5px 10px #999;
+}
+/*Contenerdor de texto y menú*/
+.container-text{
+    padding: 25px;
+    font-size: 80px;
+    background: center url("https://urlcc.cc/k7f4z");
+    color: #fff;
+    display: flex;
+    width: 100%;
+    padding-left: 90px;
+    border-top-left-radius: 50px;
+    border-end-start-radius:50px;
+}
+
+/*menú*/
+.menu{
+    width: 700px;
+    background: rgb(147, 3, 3);
+    display:flex;
+    list-style: none;
+    border-top-right-radius: 50px;
+    border-end-end-radius:50px;
+}
+
+.menu li{
+    margin: 10px;
+    padding: 50px;
+}
+
+li a{
+    color:#fff;
+    font-size: 70px;
+    text-align:center;
+}
+.menu :hover{
+    transition: .5s;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 100px;
+}
+
+/*Buscador*/
+#search[type=text]{
+    margin: 30px;
+    padding-left: 70px;
+    width: 40%;
+    height: 100px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 50px;
+    grid-row: 2; /*fila 2*/
+    grid-column-start: 1; /*la columna 1*/
+    grid-column-end: 3; /*hasta la columna 2*/
+}
+
+/*Contenedor contenido*/
+.container{
+    display:flex;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 80px;
+    flex-wrap: wrap;
+    grid-gap: 25px;
+    justify-content:center;
+    grid-row: 3; /*fila 1*/
+    grid-column-start: 1; /*la columna 1*/
+    grid-column-end: 3; /*hasta la columna 2*/
+}
+
+.card-image{
+    width: 100%;
+    height: 100%;
+}
+
+.image-container{
+    width: 100%;
+    height: 400px;
+}
+
+.description-container{
+    display:inline;
+    padding-top: 10px;
+    align-items: center;
+    height: 130px;
+    width: 100%;
+    text-align:center;
+    font-family: 'Zen Loop', cursive;
+    font-size: 30px;
+}
+
+.card-big-box{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 500px;
+    height: 550px;
+    padding: 10px;
+    border: 1px solid #999;
+    box-shadow: 6px 6px 8px #999;
+    background: #12203E;
+    color: #fff;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.container :hover{
+    cursor: pointer;
+    background: rgb(56, 2, 118);
+}
+
+/*Pantalla multimedia*/
+@media screen and (max-width: 769px) and (min-width: 0px) {
+    .container-grid{
+        margin: 0;
+        padding: 0;
+        display:grid;
+        grid-template-columns: 100%;/*1columna de 100% de la página)*/
+        grid-template-rows: repeat(3, 1fr);;/*3 columnas del 100%)*/
+    }
+    .container-grid #search{
+        width: 80%;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1800px) and (min-width: 770px){
+    .container-grid{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 100%;/*1columna de 100% de la página)*/
+        grid-template-rows: repeat(3, 1fr);;/*3 columnas del 100%)*/
+    }
+
+    .header{
+        width: 100%;
+        height: 120px;
+    }
+    .container-text{
+        font-size: 30px;
+        height: 60px;
+    }
+    .menu{
+        height: 110px;
+        display: flex;
+        align-items: center;
+    }
+    .menu li a{
+        height: 60px;
+        text-align: center;
+        font-size: 40px;
+    }
+    .container-grid #search{
+        width: 80%;
+        height: 60px;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+}
